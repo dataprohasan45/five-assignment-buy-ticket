@@ -90,7 +90,7 @@
         <section id="scroll-for-buy" class="border lg:px-24 bg-[#F7F8F8] py-10 mt-20 ">
             
             <div class="text-center mt-6">
-                <h1 class="text-black font-extrabold text-4xl">H Paribahan</h1>
+                <h1 class="text-black font-extrabold text-4xl">Hasan Paribahan</h1>
 
                 <h4>Hasan paribahan service can give you best ticket buy experience . Our service best rating service and we trust <br> we will can give you best service from us.</h4>
             </div>
@@ -114,7 +114,7 @@
                     <div class="">
                         <button class="flex gap-1 border bg-[#1DD10026] p-2 rounded-[10px]">
                             <img src="images/seat-green.png" alt="">
-                            <div class="text-[18px] font-bold text-[#1DD100]"><span>40</span> seats left</div>
+                            <div class="text-[18px] font-bold text-[#1DD100]"><span id="seat-left">8</span> seats left</div>
                         </button>
                     </div>
                 </div>
@@ -206,12 +206,14 @@
         <h1 class=" w-10 text-center p-4 ">A</h1>
         <div class="grid gap-20  grid-cols-4">
             
-                <button id="A1" class="  px-10 rounded-[12px] bg-[#F7F8F8] p-2 w-2">A1</button>
-            <button id="A2" class="bg-[#F7F8F8]  rounded-[12px] px-10 ">A2</button>
+                <button onclick="buttonClick()" id="A1" class="add-btn  px-10 rounded-[12px] bg-[#F7F8F8] p-2 w-2">A1</button>
+            <button 
+           onclick="secondClick()"
+             id="A2" class="add-btn  bg-[#F7F8F8]  rounded-[12px] px-10 ">A2</button>
             
             
-                <button id="A3" class="bg-[#F7F8F8] rounded-[12px] px-10 ">A3</button>
-            <button id="A4" class="bg-[#F7F8F8] rounded-[12px]   px-10">A4</button>
+                <button onclick="thirdClick()" id="A3" class="add-btn  bg-[#F7F8F8] rounded-[12px] px-10 ">A3</button>
+            <button onclick="fourClick()" id="A4" class="add-btn  bg-[#F7F8F8] rounded-[12px]   px-10">A4</button>
             
         </div>
     </div>
@@ -220,12 +222,12 @@
         <h1 class=" w-10 text-center p-4 ">B</h1>
         <div class="grid gap-20  grid-cols-4">
             
-                <button id="B1" class="  px-10 rounded-[12px] bg-[#F7F8F8] p-2 w-2">B1</button>
-            <button id="B2" class="bg-[#F7F8F8]  rounded-[12px] px-10 ">B2</button>
+                <button onclick="fiveClick()" id="B1" class="add-btn  px-10 rounded-[12px] bg-[#F7F8F8] p-2 w-2">B1</button>
+            <button onclick="sixClick()" id="B2" class="add-btn bg-[#F7F8F8]  rounded-[12px] px-10 ">B2</button>
             
             
-                <button id="B3" class="bg-[#F7F8F8] rounded-[12px] px-10 ">B3</button>
-            <button id="B4" class="bg-[#F7F8F8] rounded-[12px]   px-10">B4</button>
+                <button onclick="sevenClick()" id="B3" class="add-btn bg-[#F7F8F8] rounded-[12px] px-10 ">B3</button>
+            <button onclick="eightClick()" id="B4" class="add-btn bg-[#F7F8F8] rounded-[12px]   px-10">B4</button>
             
         </div>
     </div>
@@ -243,42 +245,85 @@
         <!-- table -->
         <div class="bg-[#F7F8F8] p-4 rounded-md">
             <!-- 1 line -->
-            <div class="flex justify-between">
-                <h2 class="text-[18px] font-bold">Seat <span id="default-buy">0</span></h2>
+            <div  class="flex justify-between">
+                <h2 class="text-[18px] font-bold">Seat <span id="default-count" class="bg-green-500 text-white rounded-md">0</span></h2>
                 <h2 class="text-[18px] font-bold">Class</h2>
                 <h2 class="text-[18px] font-bold" >Price</h2>
             </div>
-            <h6>--------------------------------------------------------------------------------------------</h6>
-                <!-- 2 line -->
-                <div class="flex justify-between">
-                    <h2 class="text-[18px] font-medium"><span id="default-buy">No Seat</span></h2>
-                    <h2 class="text-[18px] font-medium">Economoy</h2>
-                    <h2 class="text-[18px] font-medium" ><span>0</span></h2>
+            <h6>---------------------------------------------------------------------------------------</h6>
+              <div>
+                  <!-- 2 line -->
+                <div class="flex justify-between ">
+                    <h3 class="text-[18px] font-medium"><span id="first-seat"></span></h3>
+                    <h2  class="text-[18px] font-medium"><span id="economoy"></span></h2>
+                    <h2 class="text-[18px] font-medium" ><span id="price-seat"></span></h2>
                 </div>
             <!-- 3 line -->
-            <div class="flex justify-between">
-                <h2 class="text-[18px] font-medium"><span id="default-buy">No Seat</span></h2>
-                <h2 class="text-[18px] font-medium">Economoy</h2>
-                <h2 class="text-[18px] font-medium" ><span>0</span></h2>
+            <div class="flex justify-between ">
+                <h2 class="text-[18px] font-medium"><span id="second-seat"></span></h2>
+                <h2 class="text-[18px] font-medium"> <span id="economoy2"></span></h2>
+                <h2 class="text-[18px] font-medium" ><span id="price-seat2"></span></h2>
             </div>
             
+            <!--  4 line-->
 
-        
+            <div class="flex justify-between ">
+                <h2 class="text-[18px] font-medium"><span id="third-seat"></span></h2>
+                <h2 class="text-[18px] font-medium"> <span id="economoy3"></span></h2>
+                <h2 class="text-[18px] font-medium" ><span id="price-seat3"></span></h2>
+            </div>
+<!-- line 5 -->
+<div class="flex justify-between ">
+    <h2 class="text-[18px] font-medium"><span id="four-seat"></span></h2>
+    <h2 class="text-[18px] font-medium"> <span id="economoy4"></span></h2>
+    <h2 class="text-[18px] font-medium" ><span id="price-seat4"></span></h2>
+</div>
+<!-- line 6 -->
+<div class="flex justify-between ">
+    <h2 class="text-[18px] font-medium"><span id="five-seat"></span></h2>
+    <h2 class="text-[18px] font-medium"> <span id="economoy5"></span></h2>
+    <h2 class="text-[18px] font-medium" ><span id="price-seat5"></span></h2>
+</div>
+<!-- line 7 -->
+<div class="flex justify-between ">
+    <h2 class="text-[18px] font-medium"><span id="six-seat"></span></h2>
+    <h2 class="text-[18px] font-medium"> <span id="economoy6"></span></h2>
+    <h2 class="text-[18px] font-medium" ><span id="price-seat6"></span></h2>
+</div>
+<!-- line 8 -->
+<div class="flex justify-between ">
+    <h2 class="text-[18px] font-medium"><span id="seven-seat"></span></h2>
+    <h2 class="text-[18px] font-medium"> <span id="economoy7"></span></h2>
+    <h2 class="text-[18px] font-medium" ><span id="price-seat7"></span></h2>
+</div>
+<!-- line 9 -->
+<div class="flex justify-between ">
+    <h2 class="text-[18px] font-medium"><span id="eight-seat"></span></h2>
+    <h2 class="text-[18px] font-medium"> <span id="economoy8"></span></h2>
+    <h2 class="text-[18px] font-medium" ><span id="price-seat8"></span></h2>
+</div>        
+
+</div>
+<!-- end -->
         <!--  -->
         <hr class="text-[#03071233] ">
         <div class="flex justify-between mt-4">
             <h1 class="font-bold text-[#030712] text-[16px] ">Total Price</h1>
-            <h1 class="font-bold text-[#030712]" >BDT <span>0</span></h1>
+            <h1 class="font-bold text-[#030712]" >BDT <span id="total-tk">0</span></h1>
         </div>
         <div class="ml-[100px] w-[500px] mt-8">
             <form class="w-[400px] bg-white p-2  rounded-[12px]  border" action="">
-                <input class=" h-[60px] pl-6 text-[14px] w-[290px]" type="text" placeholder="Have any Coupon?">
-                <button class=" h-[60px] w-[80px] font-semibold text-[16px] bg-[#1DD100] rounded-md">Apply</button>
+                <input id="coupon-input" class=" h-[60px] pl-6 text-[14px] w-[290px]" type="text" placeholder="Have any Coupon?">
+                <button id="coupon-btn" class=" h-[60px] w-[80px] font-semibold text-[16px] bg-[#1DD100] rounded-md">Apply</button>
             </form>
         </div>
+<div id="discount-container" >
+
+</div>
+
         <div class="flex justify-between mt-8">
              <h1 class="font-bold text-[16px]">Grand Total</h1>
-             <h1 class="text-[#030712] font-bold">BDT <span>0</span></h1>
+             <h1 class="text-[#030712] font-bold">BDT <span id="total-pay">0</span></h1>
         </div>
 
         </div>
@@ -289,12 +334,12 @@
             <h1 class="font-semibold text-[16px] text-[#030712]">Passenger Name<span class="text-4xl">*</span></h1>
             <input class="border w-full h-[64px] rounded-xl pl-6 mt-4" type="text" placeholder="Enter your name">
 
-            <h1 class="font-semibold text-[16px] text-[#030712]">Phone Number<span class="text-4xl">*</span></h1>
-            <input class="border w-full h-[64px] rounded-xl pl-6 mt-4" type="number" required placeholder="Enter your phone number">
+            <h1  class="font-semibold text-[16px] text-[#030712]">Phone Number<span class="text-4xl">*</span></h1>
+            <input id="input" class="border w-full h-[64px] rounded-xl pl-6 mt-4" type="number" required placeholder="Enter your phone number">
 
             <h1 class="font-semibold text-[16px] text-[#030712]">Email ID</h1>
             <input class="border w-full h-[64px] rounded-xl pl-6 mt-4" type="email" placeholder="Enter your email id">
-            <button class="bg-slate-100 rounded-2xl w-full h-[64px]  mt-4">Next</button>
+            <button onclick="modalShow()" id="next-btn" class="bg-green-500 rounded-2xl w-full h-[64px]  mt-4">  Next</button>
              </div>
 
              <div class=" mt-4">
@@ -310,7 +355,16 @@
 </section>
 <!-- model part -->
 <section>
-
+    <section id="modal" class="  pt-[100px] px-24 hidden">
+        <div class="bg-white w-[720px] ml-[340px] pt-[100px] h-[500px]">
+            <img src="images/success.png" class="ml-[300px]" alt="">
+            <h1 class="text-center mt-8 font-bold text-[24px]">SUCCESS</h1>
+            <h4 class="text-center mt-6 font-medium text-[20px]">Thank you for Booking Our Bus Seats. 
+                We are working hard to find the <br> best service and deals for you</h4>
+                <h5 class="text-center mt-2">Shortly you will find a confirmation in your email.</h5>
+              <button class="bg-[#27AE60] font-semibold ml-[300px] text-[20px] text-white px-10 p-2 rounded-[32px] mt-4">Continue</button>  
+        </div>
+    </section>
 </section>
     </main>
     <footer>
@@ -318,7 +372,7 @@
 
 </section>
     </footer>
-
+    <script src="scripts/second.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
