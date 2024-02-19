@@ -46,27 +46,7 @@ function setInnerText(id, value){
 
 
 // coupon
-const couponBtn = ('coupon-btn');
-couponBtn.addEventListener('click',function(){
-    const couponValue = getElementValueById('coupon-input');
-    if(couponValue === 'NEW15'){
-        const grandTotal = parseInt(getInnerTextById('total-pay'));
 
-        const discount = grandTotal * .15;
-        const newGrandTotal = grandTotal - discount;
-        const h3 = document.createElement('h3');
-        h3.innerText = 'you got 15% discount';
-        h3.classList.add('font-bold', 'text-green-600')
-        const p = document.createElement('p');
-        p.innerText = `Discounted amount ${discount}`;
-        p.classList.add('font-bold', 'text-green-600');
-        h3.appendChild(p);
-        const discountContainer = document.getElementById('discount-container');
-        discountContainer.appendChild(h3);
-        console.log(grandTotal);
-
-    }
-})
 
 
 
@@ -76,6 +56,7 @@ function buttonClick(){
     SeatName('economoy');
     priceSend('price-seat');
     buttonColor('A1');
+    inputBttonShow('input');
 }
 
 function secondClick(){
@@ -83,6 +64,7 @@ function secondClick(){
     secondSeat('economoy2');
     secondPrice('price-seat2');
     buttonColor('A2');
+    inputBttonShow('input');
 }
 
 function thirdClick(){
@@ -90,6 +72,7 @@ function thirdClick(){
     thirdSeat('economoy3');
     thirdPrice('price-seat3');
     buttonColor('A3');
+    inputBttonShow('input');
 }
 
 function fourClick(){
@@ -97,6 +80,7 @@ function fourClick(){
     fourSeat('economoy4');
     fourPrice('price-seat4');
     buttonColor('A4');
+    inputBttonShow('input');
 }
 
 function fiveClick(){
@@ -104,6 +88,7 @@ function fiveClick(){
      fiveSeat('economoy5');
      fivePrice('price-seat5');
      buttonColor('B1');
+     inputBttonShow('input');
 }
 
 function sixClick(){
@@ -111,6 +96,7 @@ function sixClick(){
     sixSeat('economoy6');
     sixPrice('price-seat6');
     buttonColor('B2');
+    inputBttonShow('input');
 }
 
 function sevenClick(){
@@ -118,6 +104,7 @@ function sevenClick(){
     sevenSeat('economoy7');
     sevenPrice('price-seat7');
     buttonColor('B3');
+    inputBttonShow('input');
 }
 
 function eightClick(){
@@ -125,6 +112,7 @@ function eightClick(){
     eightSeat('economoy8');
     eightPrice('price-seat8');
     buttonColor('B4');
+    inputBttonShow('input');
 }
 
 function modalShow(){

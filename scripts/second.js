@@ -167,7 +167,26 @@ function eightSeat(elementId){
 
 }
 
+// input data
+document.getElementById('input').addEventListener('keyup', function(event){
+    const text = event.target.value;
+    const disableButton = document.getElementById('next-btn');
+    if(text === '1' || text === '2' || text === '3' || text === '4' || text === '5' || text === '6' || text ===  '0' || text === '12' || text === '123' || text === "7" || text === "8" || text === "9"|| text === "1234" || text === "12345" || text === "67890" || text === "0123456789"){
+        disableButton.removeAttribute('disabled');
+        disableButton.style.backgroundColor = 'green';
+    }
+    else{
+        disableButton.setAttribute('disabled', true);
+        disableButton.style.backgroundColor = 'white';
+        
+    }
+})
 
+function inputBttonShow(elementId){
+    const buttonShow = document.getElementById(elementId);
+    const buttonSHOW = buttonShow.removeAttribute('disabled');
+    
+} 
 
 // modal show
 
